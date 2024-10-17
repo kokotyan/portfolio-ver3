@@ -179,6 +179,24 @@ const App: React.FC = () => {
             ))}
           </div>
         </section>
+
+        {/* Resume Section */}
+        <section
+          id="resume"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16"
+        >
+          <h2 className="text-3xl font-bold text-gray-900">履歴書</h2>
+          <p className="mt-4 text-lg text-gray-600">
+            私の最新の履歴書はこちらからダウンロードできます。
+          </p>
+          <a
+            href="/path-to-your-resume.pdf"
+            download
+            className="mt-4 inline-block bg-indigo-600 text-white p-3 rounded-md"
+          >
+            履歴書をダウンロード
+          </a>
+        </section>
       </main>
 
       {/* Footer */}
