@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tailwindディレクティブの後にカスタムスタイルを追加 */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -9,9 +10,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* スクロールのオフセット調整 */
+html {
+  scroll-padding-top: 4rem;
+  /* ナビゲーションバーの高さ分を確保 */
+}
+
+/* セクションのアニメーション用スタイル */
+.section-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.section-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
 }
