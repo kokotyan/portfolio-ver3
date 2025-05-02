@@ -2,37 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tailwindディレクティブの後にカスタムスタイルを追加 */
+/* カスタム背景・フォント・スクロール */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-y: auto;
+  font-family: 'Noto Serif JP', serif;
+  background-color: #1e1b16;
+  background-size: cover;
+  background-position: top right;
+  background-attachment: fixed;
+  color: #d7c5a5;
   scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* スクロールのオフセット調整 */
 html {
   scroll-padding-top: 4rem;
-  /* ナビゲーションバーの高さ分を確保 */
 }
 
-/* セクションのアニメーション用スタイル */
-.section-enter {
+.fade-in {
   opacity: 0;
   transform: translateY(20px);
+  animation: fadeIn 0.7s ease-out forwards;
 }
 
-.section-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 星のアニメーションレイヤー */
+.starry-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 0;
+  animation: starsMove 120s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes starsMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
