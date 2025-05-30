@@ -13,10 +13,11 @@ module.exports = {
         'spacing': 'margin, padding',
       },
       animation: {
-        'fade-in-up': 'fadeInUp 0.7s ease-out',
+        'fade-in': 'fadeIn 0.7s ease-out forwards',
+        'flip-diagonal-2-tl': 'flipDiagonal2Tl 0.7s ease-in-out forwards',
       },
       keyframes: {
-        fadeInUp: {
+        fadeIn: {
           '0%': {
             opacity: '0',
             transform: 'translateY(20px)',
@@ -24,6 +25,16 @@ module.exports = {
           '100%': {
             opacity: '1',
             transform: 'translateY(0)',
+          },
+        },
+        flipDiagonal2Tl: {
+          '0%': {
+            transform: 'rotate3d(1, 1, 0, -360deg)',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'rotate3d(1, 1, 0, 0deg)',
+            opacity: '1',
           },
         },
       },

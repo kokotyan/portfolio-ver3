@@ -18,12 +18,6 @@ html {
   scroll-padding-top: 4rem;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.7s ease-out forwards;
-}
-
 body {
   position: relative;
   overflow-x: hidden;
@@ -49,13 +43,5 @@ body {
   }
   100% {
     transform: translate(-50%, -50%);
-  }
-}
-
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

@@ -15,7 +15,9 @@ const Section = ({
     <section
       id={id}
       ref={ref}
-      className={`max-w-5xl mx-auto px-4 py-16 ${inView ? "fade-in" : ""}`}
+      className={`max-w-5xl mx-auto px-4 py-16 ${
+        inView ? "animate-fade-in" : ""
+      }`}
     >
       <h2 className="text-3xl font-bold text-[#c9a063] mb-4">{title}</h2>
       <div className="text-lg leading-relaxed">{children}</div>
@@ -156,6 +158,7 @@ const App: React.FC = () => {
           </div>
         </Section>
       </main>
+
       <footer className="bg-[#2b241d] text-[#d7c5a5] py-8 mt-16 text-center text-sm border-t border-[#3f3a33]">
         <p>喫茶 kokos - たばこの吸えるおやすみ処</p>
         <p>営業時間：10:30~15:30 ｜ 定休日：日祝</p>
