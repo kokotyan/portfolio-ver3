@@ -161,7 +161,8 @@ const App: React.FC = () => {
 
       <footer className="bg-[#2b241d] text-[#d7c5a5] py-8 mt-16 text-center text-sm border-t border-[#3f3a33]">
         <p>喫茶 kokos - たばこの吸えるおやすみ処</p>
-        <p>営業時間：10:30~15:30 ｜ 定休日：日祝</p>
+        <p>営業時間：13:30~17:30 ｜ 定休日：月、水、土、日。祝
+        </p>
         <p className="mt-2">石川県金沢市某所</p>
         <p className="mt-2">&copy; 2025 Koko's Portfolio</p>
       </footer>
